@@ -14,7 +14,7 @@ def display_ui(df):
     
     # Crear un frame para la tabla
     frame = ttk.Frame(ventana_principal)
-    frame.pack(pady=10, fill="both", expand=True)
+    frame.pack()
     
     # Obtener las columnas del DataFrame
     columnas = list(df.columns)
@@ -31,8 +31,7 @@ def display_ui(df):
     for _, row in df.iterrows():
         tabla.insert("", tk.END, values=list(row))
     
-    # Agregar una scrollbar vertical para la tabla
-    tabla.pack(side='left', fill='both', expand=True)
+    tabla.pack()
     
     # Ejecutar la UI
     ventana_principal.mainloop()
